@@ -3,6 +3,19 @@
   <head>
     <title><%= title %></title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <style>
+      p {
+        display: flex;
+      }
+
+      span {
+        width: 10vw;
+      }
+
+      input[type=submit] {
+       align-self: flex-end;        
+      }
+    </style>
   </head>
   <body>
     <h1><%= title %></h1>
@@ -16,8 +29,8 @@
     <% } %>
 
     <form method="POST">
-      <p>User: <input type="text" name="user" /></p>
-      <p>Pass: <input type="password" name="pass" /></p>
+      <p><span>User:</span><input type="text" name="user" /></p>
+      <p><span>Pass: </span><input type="password" name="pass" /></p>
       <p><input type="submit" /></p>      
     </form>
   </body>
