@@ -15,7 +15,7 @@ router.get('/:app', function(req, res, next) {
 
 router.post('/:app', function(req, res, next) {
   const { user, pass } = req.body;
-  res.render('index', { title, user, pass });
+  res.render('index', { title, user, pass: `${pass.length} length` });
 })
 
 module.exports = router;
